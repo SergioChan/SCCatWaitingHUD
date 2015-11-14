@@ -1,0 +1,46 @@
+//
+//  SCViewController.m
+//  SCCatWaitingHUD
+//
+//  Created by SergioChan on 11/14/2015.
+//  Copyright (c) 2015 SergioChan. All rights reserved.
+//
+
+#import "SCViewController.h"
+#import "SCCatWaitingHUD.h"
+
+@interface SCViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *hintLabel;
+@end
+
+@implementation SCViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor lightGrayColor];
+	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    if(![SCCatWaitingHUD sharedInstance].isAnimating)
+    {
+        [[SCCatWaitingHUD sharedInstance] animate];
+        self.hintLabel.text = @"Tap to stop";
+    }
+    else
+    {
+        [[SCCatWaitingHUD sharedInstance] stop];
+        self.hintLabel.text = @"Tap to animate";
+    }
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end

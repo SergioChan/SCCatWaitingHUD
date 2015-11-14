@@ -37,11 +37,15 @@
         _backgroundWindow.userInteractionEnabled = NO;
         self.isAnimating = NO;
         
+        NSString *bundlePath = [[NSBundle bundleForClass:[SCCatWaitingHUD class]]
+                                pathForResource:@"SCCatWaitingHUD" ofType:@"bundle"];
+        NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+        
         CGFloat width =  Global_animationSize;
         self.faceView = [[UIImageView alloc]initWithFrame:CGRectMake(self.width/2.0f - width/2.0f, self.height/2.0f - width/2.0f, width, width)];
         _faceView.contentMode = UIViewContentModeScaleAspectFill;
         _faceView.backgroundColor = [UIColor clearColor];
-        _faceView.image = [UIImage imageNamed:@"CatFace"];
+        _faceView.image = [UIImage imageNamed:@"MAO@2x" inBundle:bundle compatibleWithTraitCollection:nil];
         [_backgroundWindow addSubview:_faceView];
         
         self.leftEye = [[UIView alloc]initWithFrame:CGRectMake(self.faceView.left + 8.0f, self.faceView.top + width/3.0f + 1.0f, 5.0f, 5.0f)];
@@ -63,7 +67,7 @@
         self.mouseView = [[UIImageView alloc]initWithFrame:CGRectMake(self.width/2.0f - width * 1.25f, self.height/2.0f - width * 1.25f, width * 2.5f, width * 2.5f)];
         _mouseView.contentMode = UIViewContentModeScaleAspectFill;
         _mouseView.backgroundColor = [UIColor clearColor];
-        _mouseView.image = [UIImage imageNamed:@"Mouse"];
+        _mouseView.image = [UIImage imageNamed:@"mouse@2x" inBundle:bundle compatibleWithTraitCollection:nil];
         [_backgroundWindow addSubview:_mouseView];
     }
     return self;

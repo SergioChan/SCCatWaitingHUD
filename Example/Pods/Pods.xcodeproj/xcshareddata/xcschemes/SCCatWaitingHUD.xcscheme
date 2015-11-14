@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '565AB64DD7C696F16825C38C'
+               BlueprintIdentifier = 'CD2325BB4C719019197361A4'
                BlueprintName = 'SCCatWaitingHUD'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SCCatWaitingHUD.framework'>

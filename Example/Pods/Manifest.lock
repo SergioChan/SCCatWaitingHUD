@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SCCatWaitingHUD: fe25cfb27aca2d6ae91d12047ea10a85736e1970
+  SCCatWaitingHUD: 82d0ddfd0aec206cba0459c53bc4a8b6bf068fda
 
 COCOAPODS: 0.39.0
