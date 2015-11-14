@@ -15,4 +15,6 @@
 
 #define Global_catPurple [UIColor colorWithRed:75.0f/255.0f green:52.0f/255.0f blue:97.0f/255.0f alpha:1.0f]
 
+#define Global_animationSize 50.0f
+
 #endif /* GlobalHeader_h */

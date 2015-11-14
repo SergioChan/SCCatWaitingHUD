@@ -10,19 +10,16 @@
 #import "SCCatWaitingHUD.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *hintLabel;
 
-@property (nonatomic, strong) SCCatWaitingHUD *hudView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = Global_catPurple;
+    self.view.backgroundColor = [UIColor lightGrayColor];
     // Do any additional setup after loading the view, typically from a nib.
-    self.hudView = [[SCCatWaitingHUD alloc]initWithFrame:CGRectMake(0.0f, 0.0f, ScreenWidth, ScreenHeight)];
-    [self.view addSubview:_hudView];
-//    [view animate];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -32,13 +29,15 @@
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    if(!_hudView.isAnimating)
+    if(![SCCatWaitingHUD sharedInstance].isAnimating)
     {
-        [_hudView animate];
+        [[SCCatWaitingHUD sharedInstance] animate];
+        self.hintLabel.text = @"Tap to stop";
     }
     else
     {
-        [_hudView stop];
+        [[SCCatWaitingHUD sharedInstance] stop];
+        self.hintLabel.text = @"Tap to animate";
     }
      
 }

@@ -23,13 +23,25 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="微博:@Animatious 一起动画开源组" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMG-hy-jUu">
+                                <rect key="frame" x="165" y="57" width="271" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="inM-fT-QfX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5nf-SK-W91"/>
+                            <constraint firstItem="inM-fT-QfX" firstAttribute="top" secondItem="sMG-hy-jUu" secondAttribute="bottom" constant="5" id="Nut-KL-dcK"/>
                             <constraint firstItem="inM-fT-QfX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OZA-fa-n16"/>
                             <constraint firstItem="inM-fT-QfX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="150" id="a2J-qS-qAQ"/>
+                            <constraint firstItem="sMG-hy-jUu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="csU-IM-B0F"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hintLabel" destination="inM-fT-QfX" id="ByI-IM-Xa1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
