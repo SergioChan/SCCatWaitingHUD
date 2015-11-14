@@ -1,0 +1,14 @@
+PODS:
+  - SCCatWaitingHUD (0.1.0)
+
+DEPENDENCIES:
+  - SCCatWaitingHUD (from `../`)
+
+EXTERNAL SOURCES:
+  SCCatWaitingHUD:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SCCatWaitingHUD: fe25cfb27aca2d6ae91d12047ea10a85736e1970
+
+COCOAPODS: 0.39.0

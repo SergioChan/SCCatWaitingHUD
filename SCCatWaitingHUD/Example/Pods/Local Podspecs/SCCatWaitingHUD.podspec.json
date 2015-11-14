@@ -1,0 +1,25 @@
+{
+  "name": "SCCatWaitingHUD",
+  "version": "0.1.0",
+  "summary": "A short description of SCCatWaitingHUD.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/SCCatWaitingHUD",
+  "license": "MIT",
+  "authors": {
+    "SergioChan": "yuheng9211@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/SCCatWaitingHUD.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "SCCatWaitingHUD": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
