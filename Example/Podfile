@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'SCCatWaitingHUD_Example', :exclusive => true do
+  pod "SCCatWaitingHUD", :path => "../"
+end
+
+target 'SCCatWaitingHUD_Tests', :exclusive => true do
+  pod "SCCatWaitingHUD", :path => "../"
+
+  
+end
