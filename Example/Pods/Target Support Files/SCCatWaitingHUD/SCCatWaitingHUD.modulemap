@@ -1,6 +1,0 @@
-framework module SCCatWaitingHUD {
-  umbrella header "SCCatWaitingHUD-umbrella.h"
-
-  export *
-  module * { export * }
-}

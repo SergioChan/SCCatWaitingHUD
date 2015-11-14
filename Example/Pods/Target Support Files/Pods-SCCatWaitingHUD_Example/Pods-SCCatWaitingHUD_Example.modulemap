@@ -1,6 +1,0 @@
-framework module Pods_SCCatWaitingHUD_Example {
-  umbrella header "Pods-SCCatWaitingHUD_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}
