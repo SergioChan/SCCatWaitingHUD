@@ -1,19 +1,19 @@
 {
   "name": "SCCatWaitingHUD",
   "version": "0.1.0",
-  "summary": "A short description of SCCatWaitingHUD.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/SCCatWaitingHUD",
+  "summary": "Cute and simple waiting HUD indicator on iOS",
+  "description": "Cute and simple waiting HUD indicator on iOS.",
+  "homepage": "https://github.com/SergioChan/SCCatWaitingHUD",
   "license": "MIT",
   "authors": {
     "SergioChan": "yuheng9211@qq.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/SCCatWaitingHUD.git",
+    "git": "https://github.com/SergioChan/SCCatWaitingHUD.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",

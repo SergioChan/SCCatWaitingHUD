@@ -1,27 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ccw-05-2KT">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="wQg-tq-qST">
+        <scene sceneID="RlJ-LA-UbE">
             <objects>
-                <viewController id="whP-gf-Uak" customClass="SCViewController" sceneMemberID="viewController">
+                <viewController id="Ccw-05-2KT" customClass="SCViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uEw-UM-LJ8"/>
-                        <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
+                        <viewControllerLayoutGuide type="top" id="Nzb-kk-SRg"/>
+                        <viewControllerLayoutGuide type="bottom" id="KOM-5m-Xgk"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
+                    <view key="view" contentMode="scaleToFill" id="pBb-FH-vBy">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap to animate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdw-KE-wao">
+                                <rect key="frame" x="176" y="86" width="248" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="微博:@Animatious 一起动画开源组" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDg-We-cTb">
+                                <rect key="frame" x="165" y="57" width="271" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xdw-KE-wao" firstAttribute="top" secondItem="hDg-We-cTb" secondAttribute="bottom" constant="5" id="1AS-eB-vJV"/>
+                            <constraint firstItem="xdw-KE-wao" firstAttribute="centerX" secondItem="pBb-FH-vBy" secondAttribute="centerX" id="CPN-fg-xKl"/>
+                            <constraint firstItem="xdw-KE-wao" firstAttribute="top" secondItem="pBb-FH-vBy" secondAttribute="top" constant="150" id="EjI-4J-uaX"/>
+                            <constraint firstItem="hDg-We-cTb" firstAttribute="centerX" secondItem="pBb-FH-vBy" secondAttribute="centerX" id="Yak-zU-ZBf"/>
+                            <constraint firstItem="xdw-KE-wao" firstAttribute="centerX" secondItem="pBb-FH-vBy" secondAttribute="centerX" id="i3m-TW-feB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hintLabel" destination="xdw-KE-wao" id="aCV-Ia-EIE"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9B9-Ir-Tpr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="302" y="442"/>
         </scene>
     </scenes>
 </document>

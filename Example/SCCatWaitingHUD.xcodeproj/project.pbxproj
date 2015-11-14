@@ -511,10 +511,10 @@
 			baseConfigurationReference = A3EF8D5822D182EC1E13CE3C /* Pods-SCCatWaitingHUD_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SCCatWaitingHUD/SCCatWaitingHUD-Prefix.pch";
 				INFOPLIST_FILE = "SCCatWaitingHUD/SCCatWaitingHUD-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -526,10 +526,10 @@
 			baseConfigurationReference = 5CFE4AA53B22DE048FC74463 /* Pods-SCCatWaitingHUD_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SCCatWaitingHUD/SCCatWaitingHUD-Prefix.pch";
 				INFOPLIST_FILE = "SCCatWaitingHUD/SCCatWaitingHUD-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		1CE80565C0A8D53F251F14669B8632E3 /* SCCatWaitingHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CFE2615B154491D0423CFB3D86FE00CC /* SCCatWaitingHUD.bundle */; };
 		1D5D1650D94709745C74AABBCB5D1D8F /* Pods-SCCatWaitingHUD_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B5DE32A8915F408EB95B6EAD37BEE2E /* Pods-SCCatWaitingHUD_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3ABCA08BB765210193F4EE567F732687 /* SCCatWaitingHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 324A558CB33D7D2AD3A95F4264A5F3CF /* SCCatWaitingHUD-dummy.m */; };
+		29D3C9C458ECE9A2D2A0940744ADFA66 /* SCCatWaitingHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 37BF2FBB2E26FEB133CD8A24A2B6AE11 /* SCCatWaitingHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		310F477D1FA5FA6BE6D99D5C54BB4FEE /* SCCatWaitingHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5307D88090AAC36D62DB42C92AE14E10 /* SCCatWaitingHUD.m */; };
 		4932E93DA688F7954D3C4F9913430634 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		4A66C4A884C9A6E2D67B873EF481F7C9 /* Pods-SCCatWaitingHUD_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDEB9FEB15F6550AA5F682B768A85BD /* Pods-SCCatWaitingHUD_Tests-dummy.m */; };
 		4D9EB61E0082A7BE150A127007A35492 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		528A2C5955392708D5D528D57F276F7B /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = C7612335BF702C230DB59EB87FE2A550 /* UIViewExt.m */; };
+		6CCF77374BB4C0A351C5677A8AE1C43F /* MAO@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 997FB919773F481DC2A76C26250C5F22 /* MAO@2x.png */; };
+		7E5C952D81ADBBFD2A77740EB4551745 /* mouse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A62ED0FB2C4D55497BEE4414BE80C15 /* mouse@2x.png */; };
 		8061C71E6DC5E2278B3CFA9FADA27965 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		AA782396AF97ECF585F784AD6BBD99C0 /* SCCatWaitingHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE6FF479C1A01ABB81BFE484D8EBD5F4 /* SCCatWaitingHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A332DAB0974DA471AD31643DB81B5F96 /* UIViewExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAE670C075E70C4CF15BA8283102263 /* UIViewExt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BFB0B67E0763E76ED4F0F875E93BD828 /* Pods-SCCatWaitingHUD_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F9F663145F5508FAD22E0D2FB9A18272 /* Pods-SCCatWaitingHUD_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C53B00DB0175CEAD29F547435A7638F2 /* Pods-SCCatWaitingHUD_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFE9FB4078E31FCA38264A17D1B57C4 /* Pods-SCCatWaitingHUD_Example-dummy.m */; };
-		F0849A801BF75647005F70A0 /* GlobalHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = F0849A7B1BF75647005F70A0 /* GlobalHeader.h */; };
-		F0849A811BF75647005F70A0 /* SCCatWaitingHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = F0849A7C1BF75647005F70A0 /* SCCatWaitingHUD.h */; };
-		F0849A821BF75647005F70A0 /* SCCatWaitingHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F0849A7D1BF75647005F70A0 /* SCCatWaitingHUD.m */; };
-		F0849A831BF75647005F70A0 /* UIViewExt.h in Headers */ = {isa = PBXBuildFile; fileRef = F0849A7E1BF75647005F70A0 /* UIViewExt.h */; };
-		F0849A841BF75647005F70A0 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = F0849A7F1BF75647005F70A0 /* UIViewExt.m */; };
-		F0849A871BF7564E005F70A0 /* MAO@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0849A851BF7564E005F70A0 /* MAO@2x.png */; };
-		F0849A881BF7564E005F70A0 /* mouse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0849A861BF7564E005F70A0 /* mouse@2x.png */; };
+		CFCC1377397187D5E861CA18F2560DAD /* SCCatWaitingHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBAB929814E6602DF0B4B6996AB7AE4 /* SCCatWaitingHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF699A0863BEE08725DDD1FCBF552DBC /* GlobalHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F1F0FD4009FB572D9B604D1D4390D93 /* GlobalHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E42CD59A9260CC6C039F9FA8CF5354CE /* SCCatWaitingHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8CBD621ED5349F9003218E295350E8 /* SCCatWaitingHUD-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,42 +51,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		038B9A05CB32AE43705C351587BBFE90 /* SCCatWaitingHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCCatWaitingHUD.xcconfig; sourceTree = "<group>"; };
 		06CC19924105191A85D5149388EDB5B2 /* Pods-SCCatWaitingHUD_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SCCatWaitingHUD_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		0B5DE32A8915F408EB95B6EAD37BEE2E /* Pods-SCCatWaitingHUD_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SCCatWaitingHUD_Example-umbrella.h"; sourceTree = "<group>"; };
 		1809F57BC9389151509A156892151CD7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C36F15238F0239D0061EB3E78DFF64E /* Pods-SCCatWaitingHUD_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SCCatWaitingHUD_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		324A558CB33D7D2AD3A95F4264A5F3CF /* SCCatWaitingHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCCatWaitingHUD-dummy.m"; sourceTree = "<group>"; };
+		37BF2FBB2E26FEB133CD8A24A2B6AE11 /* SCCatWaitingHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SCCatWaitingHUD.h; sourceTree = "<group>"; };
 		3B7DF8ED6E6CAFFCCBF5A6E03D353017 /* Pods-SCCatWaitingHUD_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SCCatWaitingHUD_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		3E1246C71E4AE4597380CA931EE3094F /* Pods-SCCatWaitingHUD_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SCCatWaitingHUD_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3F68BB5BA1C2B4DBD24FFA38E327634B /* SCCatWaitingHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCCatWaitingHUD-prefix.pch"; sourceTree = "<group>"; };
+		3F1F0FD4009FB572D9B604D1D4390D93 /* GlobalHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GlobalHeader.h; sourceTree = "<group>"; };
 		415156AF599C3BDDB7FBA68656F1EA09 /* Pods-SCCatWaitingHUD_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SCCatWaitingHUD_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		45745BA690E58AC99612BAEA9D90CA9A /* SCCatWaitingHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SCCatWaitingHUD.modulemap; sourceTree = "<group>"; };
+		4EAE670C075E70C4CF15BA8283102263 /* UIViewExt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		5307D88090AAC36D62DB42C92AE14E10 /* SCCatWaitingHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SCCatWaitingHUD.m; sourceTree = "<group>"; };
 		546110F3B084A2C0C5DE60CAFA890811 /* Pods-SCCatWaitingHUD_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SCCatWaitingHUD_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		679F8CFFBF2B2DE08E2954DFCA693CDE /* SCCatWaitingHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCCatWaitingHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F48BAFDD989A14D1C61168C1BF38062 /* SCCatWaitingHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCCatWaitingHUD-prefix.pch"; sourceTree = "<group>"; };
 		85994D86A211A6EB707B85C21001C919 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87FD927E37385C0E1B65F8BE01FE2361 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88E8881867B33B0ADBDD774AB330EB56 /* Pods-SCCatWaitingHUD_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SCCatWaitingHUD_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8A62ED0FB2C4D55497BEE4414BE80C15 /* mouse@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "mouse@2x.png"; sourceTree = "<group>"; };
 		8DFE9FB4078E31FCA38264A17D1B57C4 /* Pods-SCCatWaitingHUD_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SCCatWaitingHUD_Example-dummy.m"; sourceTree = "<group>"; };
-		A25C17C194C1A54EF80FDC8EBA3DE52F /* SCCatWaitingHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCCatWaitingHUD.xcconfig; sourceTree = "<group>"; };
+		997FB919773F481DC2A76C26250C5F22 /* MAO@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "MAO@2x.png"; sourceTree = "<group>"; };
+		9FBAB929814E6602DF0B4B6996AB7AE4 /* SCCatWaitingHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCCatWaitingHUD-umbrella.h"; sourceTree = "<group>"; };
 		A8A6BF9DD59C598F51F07BAF88ED7F22 /* Pods-SCCatWaitingHUD_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SCCatWaitingHUD_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BA8CBD621ED5349F9003218E295350E8 /* SCCatWaitingHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCCatWaitingHUD-dummy.m"; sourceTree = "<group>"; };
 		BF6C6FD1E8A53D620FC3805B4D066FDB /* Pods_SCCatWaitingHUD_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SCCatWaitingHUD_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7612335BF702C230DB59EB87FE2A550 /* UIViewExt.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
 		C89D02CF2DA42480DAFC3E0FABEA013B /* Pods-SCCatWaitingHUD_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SCCatWaitingHUD_Example-frameworks.sh"; sourceTree = "<group>"; };
 		CFE2615B154491D0423CFB3D86FE00CC /* SCCatWaitingHUD.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCCatWaitingHUD.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB87BF7F85E339A5D65C0CC82448D835 /* Pods-SCCatWaitingHUD_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SCCatWaitingHUD_Tests.modulemap"; sourceTree = "<group>"; };
-		E23C696D22CDD886E50B12992210F93E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFA47C370F489FBDC8FA5B07768F6173 /* SCCatWaitingHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SCCatWaitingHUD.modulemap; sourceTree = "<group>"; };
 		EA1724477B0E902AA25B05AD7ECBEB41 /* Pods-SCCatWaitingHUD_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SCCatWaitingHUD_Example-resources.sh"; sourceTree = "<group>"; };
 		EA3C4F8AAFABD9761541915108C5DEA0 /* Pods-SCCatWaitingHUD_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SCCatWaitingHUD_Tests-resources.sh"; sourceTree = "<group>"; };
 		ED973116732E429EE796B234E535EDFE /* Pods-SCCatWaitingHUD_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SCCatWaitingHUD_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EE6FF479C1A01ABB81BFE484D8EBD5F4 /* SCCatWaitingHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCCatWaitingHUD-umbrella.h"; sourceTree = "<group>"; };
 		EF3ACEFF284927306F05B1F607C65C71 /* Pods_SCCatWaitingHUD_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SCCatWaitingHUD_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0849A7B1BF75647005F70A0 /* GlobalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalHeader.h; sourceTree = "<group>"; };
-		F0849A7C1BF75647005F70A0 /* SCCatWaitingHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCatWaitingHUD.h; sourceTree = "<group>"; };
-		F0849A7D1BF75647005F70A0 /* SCCatWaitingHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCatWaitingHUD.m; sourceTree = "<group>"; };
-		F0849A7E1BF75647005F70A0 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
-		F0849A7F1BF75647005F70A0 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
-		F0849A851BF7564E005F70A0 /* MAO@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MAO@2x.png"; path = "Assets/MAO@2x.png"; sourceTree = "<group>"; };
-		F0849A861BF7564E005F70A0 /* mouse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mouse@2x.png"; path = "Assets/mouse@2x.png"; sourceTree = "<group>"; };
 		F1F269BBDA14E325FCC83D8F76C21736 /* Pods-SCCatWaitingHUD_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SCCatWaitingHUD_Example.modulemap"; sourceTree = "<group>"; };
 		F9F663145F5508FAD22E0D2FB9A18272 /* Pods-SCCatWaitingHUD_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SCCatWaitingHUD_Tests-umbrella.h"; sourceTree = "<group>"; };
 		FBDEB9FEB15F6550AA5F682B768A85BD /* Pods-SCCatWaitingHUD_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SCCatWaitingHUD_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -156,18 +156,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		35FC229511B3BDDDC92E8065CFA0A30C /* Support Files */ = {
+		4A692D9AD73745BEB0C76AC697B7DDF0 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				E23C696D22CDD886E50B12992210F93E /* Info.plist */,
-				45745BA690E58AC99612BAEA9D90CA9A /* SCCatWaitingHUD.modulemap */,
-				A25C17C194C1A54EF80FDC8EBA3DE52F /* SCCatWaitingHUD.xcconfig */,
-				324A558CB33D7D2AD3A95F4264A5F3CF /* SCCatWaitingHUD-dummy.m */,
-				3F68BB5BA1C2B4DBD24FFA38E327634B /* SCCatWaitingHUD-prefix.pch */,
-				EE6FF479C1A01ABB81BFE484D8EBD5F4 /* SCCatWaitingHUD-umbrella.h */,
+				997FB919773F481DC2A76C26250C5F22 /* MAO@2x.png */,
+				8A62ED0FB2C4D55497BEE4414BE80C15 /* mouse@2x.png */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SCCatWaitingHUD";
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		66F7792D5A9D642A54081F97E1B149C8 /* Pods-SCCatWaitingHUD_Example */ = {
@@ -188,15 +183,56 @@
 			path = "Target Support Files/Pods-SCCatWaitingHUD_Example";
 			sourceTree = "<group>";
 		};
+		79EF14FADADE8F639956274E3CF958E3 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E0D781EA757E5E699F1FC6B23AC863CE /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				CE5538AE2F6EB021750EA8C9541E1361 /* Development Pods */,
+				EF52BB277888DC1D5A544687906019C7 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				16EDFA2B11198A3067D4792ABB9A4DE2 /* Products */,
 				F73321FFB845979143D55BDCC3CD8F60 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8A38F1D6774AB2268B42A87002F3143B /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				4A692D9AD73745BEB0C76AC697B7DDF0 /* Assets */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		A0235621CE513D33003E0FED5D0C8B32 /* SCCatWaitingHUD */ = {
+			isa = PBXGroup;
+			children = (
+				79EF14FADADE8F639956274E3CF958E3 /* Pod */,
+				FB7BF3CBC3715F56F3B77A8769B3DBD7 /* Resources */,
+				B81D297921E46A3B78E8A998DD3417CE /* Support Files */,
+			);
+			name = SCCatWaitingHUD;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		B81D297921E46A3B78E8A998DD3417CE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				87FD927E37385C0E1B65F8BE01FE2361 /* Info.plist */,
+				DFA47C370F489FBDC8FA5B07768F6173 /* SCCatWaitingHUD.modulemap */,
+				038B9A05CB32AE43705C351587BBFE90 /* SCCatWaitingHUD.xcconfig */,
+				BA8CBD621ED5349F9003218E295350E8 /* SCCatWaitingHUD-dummy.m */,
+				7F48BAFDD989A14D1C61168C1BF38062 /* SCCatWaitingHUD-prefix.pch */,
+				9FBAB929814E6602DF0B4B6996AB7AE4 /* SCCatWaitingHUD-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SCCatWaitingHUD";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -215,43 +251,24 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		CE5538AE2F6EB021750EA8C9541E1361 /* Development Pods */ = {
+		E0D781EA757E5E699F1FC6B23AC863CE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E325FF88FB839ADE8242A5517FB8F983 /* SCCatWaitingHUD */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		E325FF88FB839ADE8242A5517FB8F983 /* SCCatWaitingHUD */ = {
-			isa = PBXGroup;
-			children = (
-				FDA60F623D43697E900E96F2E52292FF /* Pod */,
-				35FC229511B3BDDDC92E8065CFA0A30C /* Support Files */,
-			);
-			name = SCCatWaitingHUD;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		E73E48610EBCBBFB92EC2C592A0CA894 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				F0849A7B1BF75647005F70A0 /* GlobalHeader.h */,
-				F0849A7C1BF75647005F70A0 /* SCCatWaitingHUD.h */,
-				F0849A7D1BF75647005F70A0 /* SCCatWaitingHUD.m */,
-				F0849A7E1BF75647005F70A0 /* UIViewExt.h */,
-				F0849A7F1BF75647005F70A0 /* UIViewExt.m */,
+				3F1F0FD4009FB572D9B604D1D4390D93 /* GlobalHeader.h */,
+				37BF2FBB2E26FEB133CD8A24A2B6AE11 /* SCCatWaitingHUD.h */,
+				5307D88090AAC36D62DB42C92AE14E10 /* SCCatWaitingHUD.m */,
+				4EAE670C075E70C4CF15BA8283102263 /* UIViewExt.h */,
+				C7612335BF702C230DB59EB87FE2A550 /* UIViewExt.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		F0849A7A1BF75622005F70A0 /* Assets */ = {
+		EF52BB277888DC1D5A544687906019C7 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F0849A851BF7564E005F70A0 /* MAO@2x.png */,
-				F0849A861BF7564E005F70A0 /* mouse@2x.png */,
+				A0235621CE513D33003E0FED5D0C8B32 /* SCCatWaitingHUD */,
 			);
-			name = Assets;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		F73321FFB845979143D55BDCC3CD8F60 /* Targets Support Files */ = {
@@ -263,26 +280,25 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		FDA60F623D43697E900E96F2E52292FF /* Pod */ = {
+		FB7BF3CBC3715F56F3B77A8769B3DBD7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F0849A7A1BF75622005F70A0 /* Assets */,
-				E73E48610EBCBBFB92EC2C592A0CA894 /* Classes */,
+				8A38F1D6774AB2268B42A87002F3143B /* Pod */,
 			);
-			path = Pod;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		8BA117B3FDC45B1566C4AE6920C8C47E /* Headers */ = {
+		9FFFB5ED074692C2228BA7CC7D62D41B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0849A811BF75647005F70A0 /* SCCatWaitingHUD.h in Headers */,
-				F0849A801BF75647005F70A0 /* GlobalHeader.h in Headers */,
-				AA782396AF97ECF585F784AD6BBD99C0 /* SCCatWaitingHUD-umbrella.h in Headers */,
-				F0849A831BF75647005F70A0 /* UIViewExt.h in Headers */,
+				DF699A0863BEE08725DDD1FCBF552DBC /* GlobalHeader.h in Headers */,
+				CFCC1377397187D5E861CA18F2560DAD /* SCCatWaitingHUD-umbrella.h in Headers */,
+				29D3C9C458ECE9A2D2A0940744ADFA66 /* SCCatWaitingHUD.h in Headers */,
+				A332DAB0974DA471AD31643DB81B5F96 /* UIViewExt.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,10 +325,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD6223F1E0981C9737CF7900AC6C2899 /* Build configuration list for PBXNativeTarget "SCCatWaitingHUD" */;
 			buildPhases = (
-				C6ADE4E876B1B922648C34889D55C930 /* Sources */,
+				ADAB71A3E5566DD5D4BEE528341E305B /* Sources */,
 				B9EC6B8A628B8C83195DEB5108726185 /* Frameworks */,
 				057DC21320A1E82C586B48F554C5F06C /* Resources */,
-				8BA117B3FDC45B1566C4AE6920C8C47E /* Headers */,
+				9FFFB5ED074692C2228BA7CC7D62D41B /* Headers */,
 			);
 			buildRules = (
 			);
@@ -348,7 +364,7 @@
 			buildPhases = (
 				1A5B0065DF3D1EC977A5B41EC2E4F3AF /* Sources */,
 				3AEE801F0411AAEBD5C4B9B6F2173A4F /* Frameworks */,
-				69EF50BFEC231D0D8DE66CB1D77D067B /* Resources */,
+				0A312C8EC8A64E96B262CFB5F934D358 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -411,16 +427,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0849A871BF7564E005F70A0 /* MAO@2x.png in Resources */,
 				1CE80565C0A8D53F251F14669B8632E3 /* SCCatWaitingHUD.bundle in Resources */,
-				F0849A881BF7564E005F70A0 /* mouse@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		69EF50BFEC231D0D8DE66CB1D77D067B /* Resources */ = {
+		0A312C8EC8A64E96B262CFB5F934D358 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CCF77374BB4C0A351C5677A8AE1C43F /* MAO@2x.png in Resources */,
+				7E5C952D81ADBBFD2A77740EB4551745 /* mouse@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,13 +466,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6ADE4E876B1B922648C34889D55C930 /* Sources */ = {
+		ADAB71A3E5566DD5D4BEE528341E305B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0849A821BF75647005F70A0 /* SCCatWaitingHUD.m in Sources */,
-				F0849A841BF75647005F70A0 /* UIViewExt.m in Sources */,
-				3ABCA08BB765210193F4EE567F732687 /* SCCatWaitingHUD-dummy.m in Sources */,
+				E42CD59A9260CC6C039F9FA8CF5354CE /* SCCatWaitingHUD-dummy.m in Sources */,
+				310F477D1FA5FA6BE6D99D5C54BB4FEE /* SCCatWaitingHUD.m in Sources */,
+				528A2C5955392708D5D528D57F276F7B /* UIViewExt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,41 +500,109 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		03CA91998D6773EC5D02B3DB87B8353E /* Release */ = {
+		0C7F3D30D6B10C5E2C616D446E3A8513 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E1246C71E4AE4597380CA931EE3094F /* Pods-SCCatWaitingHUD_Example.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SCCatWaitingHUD_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SCCatWaitingHUD_Example/Pods-SCCatWaitingHUD_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_SCCatWaitingHUD_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */ = {
+		2DE4BB2D61BA5D55FB1AB2CB5B4669EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 415156AF599C3BDDB7FBA68656F1EA09 /* Pods-SCCatWaitingHUD_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SCCatWaitingHUD_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SCCatWaitingHUD_Tests/Pods-SCCatWaitingHUD_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_SCCatWaitingHUD_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3A595BE7B1059CE4D4B9A836F8EDF8EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 038B9A05CB32AE43705C351587BBFE90 /* SCCatWaitingHUD.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = SCCatWaitingHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		8D7A32F1A548D734D7A0CCFD59B5B85F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 546110F3B084A2C0C5DE60CAFA890811 /* Pods-SCCatWaitingHUD_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SCCatWaitingHUD_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SCCatWaitingHUD_Example/Pods-SCCatWaitingHUD_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_SCCatWaitingHUD_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -550,118 +634,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		2B206CD7FCC3E0BEFE85CA7E6DDF3C55 /* Debug */ = {
+		B05935F9C07177E5C191291A9F18EEFD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 415156AF599C3BDDB7FBA68656F1EA09 /* Pods-SCCatWaitingHUD_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SCCatWaitingHUD_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SCCatWaitingHUD_Tests/Pods-SCCatWaitingHUD_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_SCCatWaitingHUD_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3A595BE7B1059CE4D4B9A836F8EDF8EF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A25C17C194C1A54EF80FDC8EBA3DE52F /* SCCatWaitingHUD.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = SCCatWaitingHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		8A6AF2A5838F6492B13AD0B090949E81 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 546110F3B084A2C0C5DE60CAFA890811 /* Pods-SCCatWaitingHUD_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SCCatWaitingHUD_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SCCatWaitingHUD_Example/Pods-SCCatWaitingHUD_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_SCCatWaitingHUD_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9034A7AB33D462F9B29E4411B2C19E1D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E1246C71E4AE4597380CA931EE3094F /* Pods-SCCatWaitingHUD_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SCCatWaitingHUD_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SCCatWaitingHUD_Example/Pods-SCCatWaitingHUD_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_SCCatWaitingHUD_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C52D68EE1B16AB478567E4DF83CB215D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A25C17C194C1A54EF80FDC8EBA3DE52F /* SCCatWaitingHUD.xcconfig */;
+			baseConfigurationReference = 038B9A05CB32AE43705C351587BBFE90 /* SCCatWaitingHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -673,7 +655,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SCCatWaitingHUD/SCCatWaitingHUD-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SCCatWaitingHUD/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SCCatWaitingHUD/SCCatWaitingHUD.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -686,34 +668,7 @@
 			};
 			name = Debug;
 		};
-		C696D7239FC788B3004ADC48A565B84D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A25C17C194C1A54EF80FDC8EBA3DE52F /* SCCatWaitingHUD.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SCCatWaitingHUD/SCCatWaitingHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SCCatWaitingHUD/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SCCatWaitingHUD/SCCatWaitingHUD.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SCCatWaitingHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D23648A9726751A22A601E5AC9E385C7 /* Release */ = {
+		C60622C0D38F69D70BE3BEB7AFCCE1E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A8A6BF9DD59C598F51F07BAF88ED7F22 /* Pods-SCCatWaitingHUD_Tests.release.xcconfig */;
 			buildSettings = {
@@ -726,7 +681,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-SCCatWaitingHUD_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SCCatWaitingHUD_Tests/Pods-SCCatWaitingHUD_Tests.modulemap";
@@ -743,9 +698,36 @@
 			};
 			name = Release;
 		};
+		E3F3E81F627D0FF9471C8358241ABD9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 038B9A05CB32AE43705C351587BBFE90 /* SCCatWaitingHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SCCatWaitingHUD/SCCatWaitingHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SCCatWaitingHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SCCatWaitingHUD/SCCatWaitingHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SCCatWaitingHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		E42FD840E704493BEE818D9F088FD345 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A25C17C194C1A54EF80FDC8EBA3DE52F /* SCCatWaitingHUD.xcconfig */;
+			baseConfigurationReference = 038B9A05CB32AE43705C351587BBFE90 /* SCCatWaitingHUD.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				PRODUCT_NAME = SCCatWaitingHUD;
@@ -755,14 +737,48 @@
 			};
 			name = Release;
 		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */,
-				03CA91998D6773EC5D02B3DB87B8353E /* Release */,
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -770,8 +786,8 @@
 		AD6223F1E0981C9737CF7900AC6C2899 /* Build configuration list for PBXNativeTarget "SCCatWaitingHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C52D68EE1B16AB478567E4DF83CB215D /* Debug */,
-				C696D7239FC788B3004ADC48A565B84D /* Release */,
+				B05935F9C07177E5C191291A9F18EEFD /* Debug */,
+				E3F3E81F627D0FF9471C8358241ABD9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -788,8 +804,8 @@
 		B637F476AD618302C5A965318F262433 /* Build configuration list for PBXNativeTarget "Pods-SCCatWaitingHUD_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2B206CD7FCC3E0BEFE85CA7E6DDF3C55 /* Debug */,
-				D23648A9726751A22A601E5AC9E385C7 /* Release */,
+				2DE4BB2D61BA5D55FB1AB2CB5B4669EF /* Debug */,
+				C60622C0D38F69D70BE3BEB7AFCCE1E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -797,8 +813,8 @@
 		C5348B2FD25B68030099A963A87D7549 /* Build configuration list for PBXNativeTarget "Pods-SCCatWaitingHUD_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8A6AF2A5838F6492B13AD0B090949E81 /* Debug */,
-				9034A7AB33D462F9B29E4411B2C19E1D /* Release */,
+				8D7A32F1A548D734D7A0CCFD59B5B85F /* Debug */,
+				0C7F3D30D6B10C5E2C616D446E3A8513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
