@@ -17,7 +17,25 @@ This is a cute and simple loading HUD :-P Enjoy!
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+Simply use as below :
+
+```Objective-C
+if(![SCCatWaitingHUD sharedInstance].isAnimating)
+{
+    [[SCCatWaitingHUD sharedInstance] animate];
+}
+else
+{
+    [[SCCatWaitingHUD sharedInstance] stop];
+}
+```
+
+## BackLog
+* v0.1.0 Basic Version
+* v0.1.1 Add Landscape Orientation Support
+
 ## Requirements
+iOS 8.0 Above
 
 ## Installation
 
@@ -25,7 +43,7 @@ SCCatWaitingHUD is available through [CocoaPods](http://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'SCCatWaitingHUD', '~> 0.1.0'
+pod 'SCCatWaitingHUD', '~> 0.1.1'
 ```
 
 ## License
