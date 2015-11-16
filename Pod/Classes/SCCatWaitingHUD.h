@@ -20,7 +20,10 @@
 @property (nonatomic, strong) UIView *rightEye;
 
 @property (nonatomic) BOOL isAnimating;
+
 @property (nonatomic) CGFloat easeInDuration;
+
+@property (nonatomic) UIInterfaceOrientation previousOrientation;
 
 @property (nonatomic, strong) CABasicAnimation *currentAnimation;
 
