@@ -7,6 +7,13 @@
 //
 
 #import "SCCatWaitingHUD.h"
+#import <CoreText/CoreText.h>
+
+@interface SCCatWaitingHUD()
+{
+    NSTimer *timer;
+}
+@end
 
 @implementation SCCatWaitingHUD
 
@@ -15,7 +22,7 @@
     static dispatch_once_t  onceToken;
     static SCCatWaitingHUD * sharedInstance;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[SCCatWaitingHUD alloc] initWithFrame:CGRectMake(ScreenWidth/2.0f - (Global_animationSize * 4.0f)/2.0f, ScreenHeight/2.0f - (Global_animationSize * 4.0f)/2.0f, Global_animationSize * 4.0f, Global_animationSize * 4.0f)];
+        sharedInstance = [[SCCatWaitingHUD alloc] initWithFrame:CGRectMake(0.0f,0.0f,ScreenWidth,ScreenHeight)];
     });
     return sharedInstance;
 }
@@ -25,56 +32,87 @@
     self = [super initWithFrame:frame];
     if(self)
     {
-        self.easeInDuration = 0.2f;
+        self.easeInDuration = 0.3f;
+        self.animationDuration = 2.0f;
         
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(statusBarOrientationChange:)
                                                      name:UIApplicationDidChangeStatusBarOrientationNotification
                                                    object:nil];
-        self.backgroundWindow = [[UIWindow alloc]initWithFrame:self.frame];
-        _backgroundWindow.windowLevel = UIWindowLevelStatusBar;
-        _backgroundWindow.backgroundColor = [UIColor colorWithRed:75.0f/255.0f green:52.0f/255.0f blue:97.0f/255.0f alpha:0.7f];
-        _backgroundWindow.layer.cornerRadius = 6.0f;
-        _backgroundWindow.alpha = 0.0f;
         
-        self.userInteractionEnabled = NO;
-        _backgroundWindow.userInteractionEnabled = NO;
-        self.isAnimating = NO;
-        
-        NSString *bundlePath = [[NSBundle bundleForClass:[SCCatWaitingHUD class]]
-                                pathForResource:@"SCCatWaitingHUD" ofType:@"bundle"];
-        NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
-        
-        CGFloat width =  Global_animationSize;
-        self.faceView = [[UIImageView alloc]initWithFrame:CGRectMake(_backgroundWindow.width/2.0f - width/2.0f, _backgroundWindow.height/2.0f - width/2.0f, width, width)];
-        _faceView.contentMode = UIViewContentModeScaleAspectFill;
-        _faceView.backgroundColor = [UIColor clearColor];
-        _faceView.image = [UIImage imageNamed:@"MAO@2x" inBundle:bundle compatibleWithTraitCollection:nil];
-        [_backgroundWindow addSubview:_faceView];
-        
-        self.leftEye = [[UIView alloc]initWithFrame:CGRectMake(self.faceView.left + 8.0f, self.faceView.top + width/3.0f + 1.0f, 5.0f, 5.0f)];
-        _leftEye.layer.masksToBounds = YES;
-        _leftEye.layer.cornerRadius = 2.5f;
-        _leftEye.backgroundColor = [UIColor blackColor];
-        _leftEye.layer.anchorPoint = CGPointMake(1.7f, 1.3f);
-        _leftEye.layer.position = CGPointMake(self.faceView.left + 13.5f,self.faceView.top + width/3.0f + 7.5f);
-        [_backgroundWindow addSubview:_leftEye];
-        
-        self.rightEye = [[UIView alloc]initWithFrame:CGRectMake(self.leftEye.right + width/3.0f + 1.0f, self.faceView.top + width/3.0f + 1.0f, 5.0f, 5.0f)];
-        _rightEye.layer.masksToBounds = YES;
-        _rightEye.layer.cornerRadius = 2.5f;
-        _rightEye.backgroundColor = [UIColor blackColor];
-        _rightEye.layer.anchorPoint = CGPointMake(1.7f, 1.3f);
-        _rightEye.layer.position = CGPointMake(self.faceView.right - 13.5f, self.faceView.top + width/3.0f + 7.5f);
-        [_backgroundWindow addSubview:_rightEye];
-        
-        self.mouseView = [[UIImageView alloc]initWithFrame:CGRectMake(_backgroundWindow.width/2.0f - width * 1.25f, _backgroundWindow.height/2.0f - width * 1.25f, width * 2.5f, width * 2.5f)];
-        _mouseView.contentMode = UIViewContentModeScaleAspectFill;
-        _mouseView.backgroundColor = [UIColor clearColor];
-        _mouseView.image = [UIImage imageNamed:@"mouse@2x" inBundle:bundle compatibleWithTraitCollection:nil];
-        [_backgroundWindow addSubview:_mouseView];
+        [self initSubViews];
     }
     return self;
+}
+
+/**
+ *  初始化所有子视图
+ */
+- (void)initSubViews
+{
+    self.backgroundWindow = [[UIWindow alloc]initWithFrame:self.frame];
+    _backgroundWindow.windowLevel = UIWindowLevelStatusBar;
+    _backgroundWindow.backgroundColor = [UIColor clearColor];
+    _backgroundWindow.alpha = 0.0f;
+    self.title = @"Loading...";
+    
+    self.blurView = [[UIVisualEffectView alloc]initWithFrame:self.frame];
+    _blurView.effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    [_backgroundWindow addSubview:_blurView];
+    
+    self.userInteractionEnabled = NO;
+    _backgroundWindow.userInteractionEnabled = NO;
+    self.isAnimating = NO;
+    
+    self.indicatorView = [[UIView alloc]initWithFrame:CGRectMake(ScreenWidth/2.0f - (Global_animationSize * 4.0f)/2.0f, ScreenHeight/2.0f - (Global_animationSize * 4.0f)/2.0f, Global_animationSize * 4.0f, Global_animationSize * 4.0f)];
+    _indicatorView.backgroundColor = [UIColor colorWithRed:75.0f/255.0f green:52.0f/255.0f blue:97.0f/255.0f alpha:0.7f];
+    _indicatorView.layer.cornerRadius = 6.0f;
+    _indicatorView.alpha = 0.0f;
+    [_backgroundWindow addSubview:_indicatorView];
+    
+    NSString *bundlePath = [[NSBundle bundleForClass:[SCCatWaitingHUD class]]
+                            pathForResource:@"SCCatWaitingHUD" ofType:@"bundle"];
+    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+    
+    CGFloat width =  Global_animationSize;
+    self.faceView = [[UIImageView alloc]initWithFrame:CGRectMake(_indicatorView.width/2.0f - width/2.0f, _indicatorView.height/2.0f - width/2.0f - 20.0f, width, width)];
+    _faceView.contentMode = UIViewContentModeScaleAspectFill;
+    _faceView.backgroundColor = [UIColor clearColor];
+    _faceView.image = [UIImage imageNamed:@"MAO@2x" inBundle:bundle compatibleWithTraitCollection:nil];
+    [_indicatorView addSubview:_faceView];
+    
+    self.leftEye = [[UIView alloc]initWithFrame:CGRectMake(self.faceView.left + 8.0f, self.faceView.top + width/3.0f + 1.0f, 5.0f, 5.0f)];
+    _leftEye.layer.masksToBounds = YES;
+    _leftEye.layer.cornerRadius = 2.5f;
+    _leftEye.backgroundColor = [UIColor blackColor];
+    _leftEye.layer.anchorPoint = CGPointMake(1.7f, 1.3f);
+    _leftEye.layer.position = CGPointMake(self.faceView.left + 13.5f,self.faceView.top + width/3.0f + 7.5f);
+    [_indicatorView addSubview:_leftEye];
+    
+    self.rightEye = [[UIView alloc]initWithFrame:CGRectMake(self.leftEye.right + width/3.0f + 1.0f, self.faceView.top + width/3.0f + 1.0f, 5.0f, 5.0f)];
+    _rightEye.layer.masksToBounds = YES;
+    _rightEye.layer.cornerRadius = 2.5f;
+    _rightEye.backgroundColor = [UIColor blackColor];
+    _rightEye.layer.anchorPoint = CGPointMake(1.7f, 1.3f);
+    _rightEye.layer.position = CGPointMake(self.faceView.right - 13.5f, self.faceView.top + width/3.0f + 7.5f);
+    [_indicatorView addSubview:_rightEye];
+    
+    self.mouseView = [[UIImageView alloc]initWithFrame:CGRectMake(_indicatorView.width/2.0f - width * 1.25f, _indicatorView.height/2.0f - width * 1.25f - 20.0f, width * 2.5f, width * 2.5f)];
+    _mouseView.contentMode = UIViewContentModeScaleAspectFill;
+    _mouseView.backgroundColor = [UIColor clearColor];
+    _mouseView.image = [UIImage imageNamed:@"mouse@2x" inBundle:bundle compatibleWithTraitCollection:nil];
+    [_indicatorView addSubview:_mouseView];
+    
+    self.contentLabel = [[UILabel alloc]initWithFrame:CGRectMake(20.0f,self.mouseView.bottom + 15.0f,0.0f,25.0f)];
+    //_contentLabel.text = self.title;
+    _contentLabel.textColor = [UIColor whiteColor];
+    _contentLabel.font = [UIFont systemFontOfSize:20.0f];
+    _contentLabel.lineBreakMode = NSLineBreakByClipping;
+    _contentLabel.numberOfLines = 1;
+    _contentLabel.alpha = 1.0f;
+    // Set a limitation here.
+    _contentLabel.textAlignment = NSTextAlignmentCenter;
+    [_indicatorView addSubview:_contentLabel];
 }
 
 - (void)statusBarOrientationChange:(NSNotification *)notification
@@ -130,9 +168,15 @@
     }
     
     self.previousOrientation = oriention;
-    CGAffineTransform transform = _backgroundWindow.transform;
+    CGAffineTransform transform = _indicatorView.transform;
     transform = CGAffineTransformRotate(transform,  radians(degree));
-    _backgroundWindow.transform = transform;
+    _indicatorView.transform = transform;
+}
+
+- (void)animateWithInteractionEnabled:(BOOL)enabled title:(NSString *)title
+{
+    self.title = title;
+    [self animateWithInteractionEnabled:enabled];
 }
 
 - (void)animateWithInteractionEnabled:(BOOL)enabled
@@ -141,22 +185,27 @@
     self.previousOrientation = oriention;
     if(oriention == UIInterfaceOrientationPortrait)
     {
-        _backgroundWindow.frame = CGRectMake(ScreenWidth/2.0f - (Global_animationSize * 4.0f)/2.0f, ScreenHeight/2.0f - (Global_animationSize * 4.0f)/2.0f, Global_animationSize * 4.0f, Global_animationSize * 4.0f);
+        _blurView.frame = CGRectMake(0.0f, 0.0f, ScreenWidth, ScreenHeight);
+        _indicatorView.frame = CGRectMake(ScreenWidth/2.0f - (Global_animationSize * 4.0f)/2.0f, ScreenHeight/2.0f - (Global_animationSize * 4.0f)/2.0f, Global_animationSize * 4.0f, Global_animationSize * 4.0f);
     }
     else if(oriention == UIInterfaceOrientationLandscapeRight)
     {
-        _backgroundWindow.frame = CGRectMake(ScreenHeight/2.0f - (Global_animationSize * 4.0f)/2.0f, ScreenWidth/2.0f - (Global_animationSize * 4.0f)/2.0f, Global_animationSize * 4.0f, Global_animationSize * 4.0f);
-        CGAffineTransform transform = _backgroundWindow.transform;
+        _blurView.frame = CGRectMake(0.0f, 0.0f, ScreenHeight, ScreenWidth);
+        _indicatorView.frame = CGRectMake(ScreenHeight/2.0f - (Global_animationSize * 4.0f)/2.0f, ScreenWidth/2.0f - (Global_animationSize * 4.0f)/2.0f, Global_animationSize * 4.0f, Global_animationSize * 4.0f);
+        CGAffineTransform transform = _indicatorView.transform;
         transform = CGAffineTransformRotate(transform,  radians(90.0f));
-        _backgroundWindow.transform = transform;
+        _indicatorView.transform = transform;
     }
     else if(oriention == UIInterfaceOrientationLandscapeLeft)
     {
-        _backgroundWindow.frame = CGRectMake(ScreenHeight/2.0f - (Global_animationSize * 4.0f)/2.0f, ScreenWidth/2.0f - (Global_animationSize * 4.0f)/2.0f, Global_animationSize * 4.0f, Global_animationSize * 4.0f);
-        CGAffineTransform transform = _backgroundWindow.transform;
+        _blurView.frame = CGRectMake(0.0f, 0.0f, ScreenHeight, ScreenWidth);
+        _indicatorView.frame = CGRectMake(ScreenHeight/2.0f - (Global_animationSize * 4.0f)/2.0f, ScreenWidth/2.0f - (Global_animationSize * 4.0f)/2.0f, Global_animationSize * 4.0f, Global_animationSize * 4.0f);
+        CGAffineTransform transform = _indicatorView.transform;
         transform = CGAffineTransformRotate(transform,  radians(-90.0f));
-        _backgroundWindow.transform = transform;
+        _indicatorView.transform = transform;
     }
+    
+    [self configureContentLabelText];
     
     self.userInteractionEnabled = !enabled;
     _backgroundWindow.userInteractionEnabled = !enabled;
@@ -166,24 +215,27 @@
         return;
     }
     [_backgroundWindow makeKeyAndVisible];
+    timer = [NSTimer scheduledTimerWithTimeInterval:self.animationDuration * 2.0f  target:self selector:@selector(timerUpdate:) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    [timer fire];
     
     [UIView animateWithDuration:_easeInDuration animations:^{
         _backgroundWindow.alpha = 1.0f;
+        _indicatorView.alpha = 1.0f;
     } completion:^(BOOL finished) {
         _isAnimating = YES;
         CABasicAnimation *rotationAnimation;
         rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
         rotationAnimation.fromValue = [NSValue valueWithCATransform3D:getTransForm3DWithAngle(0.0f)];
         rotationAnimation.toValue = [NSValue valueWithCATransform3D:getTransForm3DWithAngle(radians(180.0f))];
-        rotationAnimation.duration = 2.0f;
+        rotationAnimation.duration = self.animationDuration;
         rotationAnimation.cumulative = YES;
         rotationAnimation.repeatCount = HUGE_VALF;
         rotationAnimation.removedOnCompletion=NO;
         rotationAnimation.fillMode=kCAFillModeForwards;
         rotationAnimation.autoreverses = NO;
         rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-        self.currentAnimation = rotationAnimation;
-        
+    
         [_mouseView.layer addAnimation:rotationAnimation forKey:@"rotate"];
         [_leftEye.layer addAnimation:rotationAnimation forKey:@"rotate"];
         [_rightEye.layer addAnimation:rotationAnimation forKey:@"rotate"];
@@ -202,18 +254,52 @@
         return;
     }
     
+    [timer invalidate];
+    timer = nil;
+    self.contentLabel.attributedText = nil;
+    self.contentLabel.frame = CGRectMake(20.0f,self.mouseView.bottom + 15.0f,0.0f,25.0f);
+    self.contentLabel.alpha = 1.0f;
+    
     [UIView animateWithDuration:_easeInDuration animations:^{
         _backgroundWindow.alpha = 0.0f;
+        _indicatorView.alpha = 0.0f;
     } completion:^(BOOL finished) {
         CGAffineTransform transform = CGAffineTransformIdentity;
         //transform = CGAffineTransformRotate(transform,  radians(0.0f));
-        _backgroundWindow.transform = transform;
-        
+        _indicatorView.transform = transform;
         _isAnimating = NO;
         _backgroundWindow.hidden = YES;
+        
+        // According to Apple Doc : This is a convenience method to make the receiver the main window and displays it in front of other windows at the same window level or lower. You can also hide and reveal a window using the inherited hidden property of UIView.
         [_mouseView.layer removeAnimationForKey:@"rotate"];
         [_leftEye.layer removeAnimationForKey:@"rotate"];
         [_rightEye.layer removeAnimationForKey:@"rotate"];
     }];
 }
+
+/**
+ *  处理Label中的文本间距
+ */
+- (void)configureContentLabelText
+{
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]initWithString:self.title];
+    long number = 5;
+    CFNumberRef num = CFNumberCreate(kCFAllocatorDefault,kCFNumberSInt8Type,&number);
+    [attributedString addAttribute:(id)kCTKernAttributeName value:(__bridge id)num range:NSMakeRange(0,[attributedString length])];
+    CFRelease(num);
+    
+    self.contentLabel.attributedText = attributedString;
+}
+
+- (void)timerUpdate:(id)sender
+{
+    [UIView animateWithDuration:self.animationDuration * 1.9f delay:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.contentLabel.width = _indicatorView.width - 40.0f;
+        self.contentLabel.alpha = 0.0f;
+    } completion:^(BOOL finished) {
+        self.contentLabel.width = 0.0f;
+        self.contentLabel.alpha = 1.0f;
+    }];
+}
+
 @end

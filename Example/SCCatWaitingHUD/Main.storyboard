@@ -29,14 +29,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="Uci-sI-ro4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xdw-KE-wao" firstAttribute="top" secondItem="hDg-We-cTb" secondAttribute="bottom" constant="5" id="1AS-eB-vJV"/>
+                            <constraint firstItem="Uci-sI-ro4" firstAttribute="leading" secondItem="pBb-FH-vBy" secondAttribute="leading" id="1w7-G3-dl9"/>
+                            <constraint firstItem="Uci-sI-ro4" firstAttribute="top" secondItem="pBb-FH-vBy" secondAttribute="top" id="8VE-01-gqJ"/>
                             <constraint firstItem="xdw-KE-wao" firstAttribute="centerX" secondItem="pBb-FH-vBy" secondAttribute="centerX" id="CPN-fg-xKl"/>
                             <constraint firstItem="xdw-KE-wao" firstAttribute="top" secondItem="pBb-FH-vBy" secondAttribute="top" constant="150" id="EjI-4J-uaX"/>
+                            <constraint firstItem="Uci-sI-ro4" firstAttribute="bottom" secondItem="pBb-FH-vBy" secondAttribute="bottom" id="JjW-4F-Dfd"/>
                             <constraint firstItem="hDg-We-cTb" firstAttribute="centerX" secondItem="pBb-FH-vBy" secondAttribute="centerX" id="Yak-zU-ZBf"/>
                             <constraint firstItem="xdw-KE-wao" firstAttribute="centerX" secondItem="pBb-FH-vBy" secondAttribute="centerX" id="i3m-TW-feB"/>
+                            <constraint firstItem="Uci-sI-ro4" firstAttribute="trailing" secondItem="pBb-FH-vBy" secondAttribute="trailing" id="tdB-1v-lLa"/>
                         </constraints>
                     </view>
                     <connections>
@@ -48,4 +55,7 @@
             <point key="canvasLocation" x="302" y="442"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="test" width="621" height="1104"/>
+    </resources>
 </document>
