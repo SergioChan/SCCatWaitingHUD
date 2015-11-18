@@ -22,7 +22,6 @@
 		BFB0B67E0763E76ED4F0F875E93BD828 /* Pods-SCCatWaitingHUD_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F9F663145F5508FAD22E0D2FB9A18272 /* Pods-SCCatWaitingHUD_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C53B00DB0175CEAD29F547435A7638F2 /* Pods-SCCatWaitingHUD_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFE9FB4078E31FCA38264A17D1B57C4 /* Pods-SCCatWaitingHUD_Example-dummy.m */; };
 		CFCC1377397187D5E861CA18F2560DAD /* SCCatWaitingHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FBAB929814E6602DF0B4B6996AB7AE4 /* SCCatWaitingHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF699A0863BEE08725DDD1FCBF552DBC /* GlobalHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F1F0FD4009FB572D9B604D1D4390D93 /* GlobalHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E42CD59A9260CC6C039F9FA8CF5354CE /* SCCatWaitingHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8CBD621ED5349F9003218E295350E8 /* SCCatWaitingHUD-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +59,6 @@
 		3B7DF8ED6E6CAFFCCBF5A6E03D353017 /* Pods-SCCatWaitingHUD_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SCCatWaitingHUD_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		3E1246C71E4AE4597380CA931EE3094F /* Pods-SCCatWaitingHUD_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SCCatWaitingHUD_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3F1F0FD4009FB572D9B604D1D4390D93 /* GlobalHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GlobalHeader.h; sourceTree = "<group>"; };
 		415156AF599C3BDDB7FBA68656F1EA09 /* Pods-SCCatWaitingHUD_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SCCatWaitingHUD_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4EAE670C075E70C4CF15BA8283102263 /* UIViewExt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
 		5307D88090AAC36D62DB42C92AE14E10 /* SCCatWaitingHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SCCatWaitingHUD.m; sourceTree = "<group>"; };
@@ -254,7 +252,6 @@
 		E0D781EA757E5E699F1FC6B23AC863CE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3F1F0FD4009FB572D9B604D1D4390D93 /* GlobalHeader.h */,
 				37BF2FBB2E26FEB133CD8A24A2B6AE11 /* SCCatWaitingHUD.h */,
 				5307D88090AAC36D62DB42C92AE14E10 /* SCCatWaitingHUD.m */,
 				4EAE670C075E70C4CF15BA8283102263 /* UIViewExt.h */,
@@ -295,7 +292,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF699A0863BEE08725DDD1FCBF552DBC /* GlobalHeader.h in Headers */,
 				CFCC1377397187D5E861CA18F2560DAD /* SCCatWaitingHUD-umbrella.h in Headers */,
 				29D3C9C458ECE9A2D2A0940744ADFA66 /* SCCatWaitingHUD.h in Headers */,
 				A332DAB0974DA471AD31643DB81B5F96 /* UIViewExt.h in Headers */,

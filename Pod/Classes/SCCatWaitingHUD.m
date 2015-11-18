@@ -13,6 +13,11 @@
 {
     NSTimer *timer;
 }
+@property (nonatomic, strong) UIView *leftEye;
+@property (nonatomic, strong) UIView *rightEye;
+
+@property (nonatomic, strong) UIView *leftEyeCover;
+@property (nonatomic, strong) UIView *rightEyeCover;
 @end
 
 @implementation SCCatWaitingHUD
@@ -64,8 +69,8 @@
     _backgroundWindow.userInteractionEnabled = NO;
     self.isAnimating = NO;
     
-    self.indicatorView = [[UIView alloc]initWithFrame:CGRectMake(ScreenWidth/2.0f - (Global_animationSize * 4.0f)/2.0f, ScreenHeight/2.0f - (Global_animationSize * 4.0f)/2.0f, Global_animationSize * 4.0f, Global_animationSize * 4.0f)];
-    _indicatorView.backgroundColor = [UIColor colorWithRed:75.0f/255.0f green:52.0f/255.0f blue:97.0f/255.0f alpha:0.7f];
+    self.indicatorView = [[UIView alloc]initWithFrame:CGRectMake(ScreenWidth/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, ScreenHeight/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, SCCatWaiting_animationSize * 4.0f, SCCatWaiting_animationSize * 4.0f)];
+    _indicatorView.backgroundColor = SCCatWaiting_catPurple;
     _indicatorView.layer.cornerRadius = 6.0f;
     _indicatorView.alpha = 0.0f;
     [_backgroundWindow addSubview:_indicatorView];
@@ -74,7 +79,7 @@
                             pathForResource:@"SCCatWaitingHUD" ofType:@"bundle"];
     NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
     
-    CGFloat width =  Global_animationSize;
+    CGFloat width =  SCCatWaiting_animationSize;
     self.faceView = [[UIImageView alloc]initWithFrame:CGRectMake(_indicatorView.width/2.0f - width/2.0f, _indicatorView.height/2.0f - width/2.0f - 20.0f, width, width)];
     _faceView.contentMode = UIViewContentModeScaleAspectFill;
     _faceView.backgroundColor = [UIColor clearColor];
@@ -89,6 +94,12 @@
     _leftEye.layer.position = CGPointMake(self.faceView.left + 13.5f,self.faceView.top + width/3.0f + 7.5f);
     [_indicatorView addSubview:_leftEye];
     
+    // Note : 比例是从sketch中算出来的
+    self.leftEyeCover = [[UIView alloc]initWithFrame:CGRectMake(self.faceView.left + width / 15.0f, self.leftEye.top - 5.0f - width/8.0f, width * 0.42f, width/10.0f)];
+    _leftEyeCover.backgroundColor = SCCatWaiting_leftFaceGray;
+    _leftEyeCover.layer.anchorPoint = CGPointMake(0.5, 0.0f);
+    [_indicatorView addSubview:_leftEyeCover];
+    
     self.rightEye = [[UIView alloc]initWithFrame:CGRectMake(self.leftEye.right + width/3.0f + 1.0f, self.faceView.top + width/3.0f + 1.0f, 5.0f, 5.0f)];
     _rightEye.layer.masksToBounds = YES;
     _rightEye.layer.cornerRadius = 2.5f;
@@ -96,6 +107,11 @@
     _rightEye.layer.anchorPoint = CGPointMake(1.7f, 1.3f);
     _rightEye.layer.position = CGPointMake(self.faceView.right - 13.5f, self.faceView.top + width/3.0f + 7.5f);
     [_indicatorView addSubview:_rightEye];
+    
+    self.rightEyeCover = [[UIView alloc]initWithFrame:CGRectMake(self.faceView.left + width * 0.52f, self.rightEye.top - 5.0f - width/8.0f, width * 0.42f, width/10.0f)];
+    _rightEyeCover.backgroundColor = SCCatWaiting_rightFaceGray;
+    _rightEyeCover.layer.anchorPoint = CGPointMake(0.5, 0.0f);
+    [_indicatorView addSubview:_rightEyeCover];
     
     self.mouseView = [[UIImageView alloc]initWithFrame:CGRectMake(_indicatorView.width/2.0f - width * 1.25f, _indicatorView.height/2.0f - width * 1.25f - 20.0f, width * 2.5f, width * 2.5f)];
     _mouseView.contentMode = UIViewContentModeScaleAspectFill;
@@ -186,12 +202,12 @@
     if(oriention == UIInterfaceOrientationPortrait)
     {
         _blurView.frame = CGRectMake(0.0f, 0.0f, ScreenWidth, ScreenHeight);
-        _indicatorView.frame = CGRectMake(ScreenWidth/2.0f - (Global_animationSize * 4.0f)/2.0f, ScreenHeight/2.0f - (Global_animationSize * 4.0f)/2.0f, Global_animationSize * 4.0f, Global_animationSize * 4.0f);
+        _indicatorView.frame = CGRectMake(ScreenWidth/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, ScreenHeight/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, SCCatWaiting_animationSize * 4.0f, SCCatWaiting_animationSize * 4.0f);
     }
     else if(oriention == UIInterfaceOrientationLandscapeRight)
     {
         _blurView.frame = CGRectMake(0.0f, 0.0f, ScreenHeight, ScreenWidth);
-        _indicatorView.frame = CGRectMake(ScreenHeight/2.0f - (Global_animationSize * 4.0f)/2.0f, ScreenWidth/2.0f - (Global_animationSize * 4.0f)/2.0f, Global_animationSize * 4.0f, Global_animationSize * 4.0f);
+        _indicatorView.frame = CGRectMake(ScreenHeight/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, ScreenWidth/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, SCCatWaiting_animationSize * 4.0f, SCCatWaiting_animationSize * 4.0f);
         CGAffineTransform transform = _indicatorView.transform;
         transform = CGAffineTransformRotate(transform,  radians(90.0f));
         _indicatorView.transform = transform;
@@ -199,7 +215,7 @@
     else if(oriention == UIInterfaceOrientationLandscapeLeft)
     {
         _blurView.frame = CGRectMake(0.0f, 0.0f, ScreenHeight, ScreenWidth);
-        _indicatorView.frame = CGRectMake(ScreenHeight/2.0f - (Global_animationSize * 4.0f)/2.0f, ScreenWidth/2.0f - (Global_animationSize * 4.0f)/2.0f, Global_animationSize * 4.0f, Global_animationSize * 4.0f);
+        _indicatorView.frame = CGRectMake(ScreenHeight/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, ScreenWidth/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, SCCatWaiting_animationSize * 4.0f, SCCatWaiting_animationSize * 4.0f);
         CGAffineTransform transform = _indicatorView.transform;
         transform = CGAffineTransformRotate(transform,  radians(-90.0f));
         _indicatorView.transform = transform;
@@ -224,21 +240,13 @@
         _indicatorView.alpha = 1.0f;
     } completion:^(BOOL finished) {
         _isAnimating = YES;
-        CABasicAnimation *rotationAnimation;
-        rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
-        rotationAnimation.fromValue = [NSValue valueWithCATransform3D:getTransForm3DWithAngle(0.0f)];
-        rotationAnimation.toValue = [NSValue valueWithCATransform3D:getTransForm3DWithAngle(radians(180.0f))];
-        rotationAnimation.duration = self.animationDuration;
-        rotationAnimation.cumulative = YES;
-        rotationAnimation.repeatCount = HUGE_VALF;
-        rotationAnimation.removedOnCompletion=NO;
-        rotationAnimation.fillMode=kCAFillModeForwards;
-        rotationAnimation.autoreverses = NO;
-        rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     
-        [_mouseView.layer addAnimation:rotationAnimation forKey:@"rotate"];
-        [_leftEye.layer addAnimation:rotationAnimation forKey:@"rotate"];
-        [_rightEye.layer addAnimation:rotationAnimation forKey:@"rotate"];
+        [_mouseView.layer addAnimation:[self rotationAnimation] forKey:@"rotate"];
+        [_leftEye.layer addAnimation:[self rotationAnimation] forKey:@"rotate"];
+        [_rightEye.layer addAnimation:[self rotationAnimation] forKey:@"rotate"];
+        
+        [_leftEyeCover.layer addAnimation:[self scaleAnimation] forKey:@"scale"];
+        [_rightEyeCover.layer addAnimation:[self scaleAnimation] forKey:@"scale"];
     }];
 }
 
@@ -259,6 +267,8 @@
     self.contentLabel.attributedText = nil;
     self.contentLabel.frame = CGRectMake(20.0f,self.mouseView.bottom + 15.0f,0.0f,25.0f);
     self.contentLabel.alpha = 1.0f;
+    [self.contentLabel.layer removeAllAnimations];
+    // 一定要在结束的时候清空这个layer所附带的所有动画，否则会在下一次出现的时候重新显示未完成的动画
     
     [UIView animateWithDuration:_easeInDuration animations:^{
         _backgroundWindow.alpha = 0.0f;
@@ -274,6 +284,9 @@
         [_mouseView.layer removeAnimationForKey:@"rotate"];
         [_leftEye.layer removeAnimationForKey:@"rotate"];
         [_rightEye.layer removeAnimationForKey:@"rotate"];
+        
+        [_leftEyeCover.layer removeAnimationForKey:@"scale"];
+        [_rightEyeCover.layer removeAnimationForKey:@"scale"];
     }];
 }
 
@@ -293,13 +306,46 @@
 
 - (void)timerUpdate:(id)sender
 {
-    [UIView animateWithDuration:self.animationDuration * 1.9f delay:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:self.animationDuration * 1.6f delay:0.0f options:UIViewAnimationOptionCurveEaseIn  animations:^{
         self.contentLabel.width = _indicatorView.width - 40.0f;
         self.contentLabel.alpha = 0.0f;
     } completion:^(BOOL finished) {
-        self.contentLabel.width = 0.0f;
         self.contentLabel.alpha = 1.0f;
+        self.contentLabel.width = 0.0f;
     }];
+}
+
+- (CABasicAnimation *)rotationAnimation
+{
+    CABasicAnimation *rotationAnimation;
+    rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
+    rotationAnimation.fromValue = [NSValue valueWithCATransform3D:getTransForm3DWithAngle(0.0f)];
+    rotationAnimation.toValue = [NSValue valueWithCATransform3D:getTransForm3DWithAngle(radians(180.0f))];
+    rotationAnimation.duration = self.animationDuration;
+    rotationAnimation.cumulative = YES;
+    rotationAnimation.repeatCount = HUGE_VALF;
+    rotationAnimation.removedOnCompletion=NO;
+    rotationAnimation.fillMode=kCAFillModeForwards;
+    rotationAnimation.autoreverses = NO;
+    rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    return rotationAnimation;
+}
+
+- (CABasicAnimation *)scaleAnimation
+{
+    // 眼皮和眼珠需要确定一个运动时间曲线
+    CABasicAnimation *scaleAnimation;
+    scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
+    scaleAnimation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+    scaleAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 2.5, 1.0)];
+    scaleAnimation.duration = self.animationDuration;
+    scaleAnimation.cumulative = YES;
+    scaleAnimation.repeatCount = HUGE_VALF;
+    scaleAnimation.removedOnCompletion= NO;
+    scaleAnimation.fillMode=kCAFillModeForwards;
+    scaleAnimation.autoreverses = YES;
+    scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    return scaleAnimation;
 }
 
 @end
