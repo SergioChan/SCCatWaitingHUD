@@ -33,6 +33,7 @@ else
 ## BackLog
 * v0.1.0 Basic Version
 * v0.1.1 Add Landscape Orientation Support
+* v0.1.4 Add eye cover and Loading contentLabel animation
 
 ## Requirements
 iOS 8.0 Above
@@ -43,7 +44,7 @@ SCCatWaitingHUD is available through [CocoaPods](http://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'SCCatWaitingHUD', '~> 0.1.1'
+pod 'SCCatWaitingHUD', '~> 0.1.4'
 ```
 
 ## License

@@ -331,21 +331,34 @@
     return rotationAnimation;
 }
 
-- (CABasicAnimation *)scaleAnimation
+- (CAAnimationGroup *)scaleAnimation
 {
     // 眼皮和眼珠需要确定一个运动时间曲线
     CABasicAnimation *scaleAnimation;
     scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
     scaleAnimation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
-    scaleAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 2.5, 1.0)];
-    scaleAnimation.duration = self.animationDuration;
+    scaleAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 3.0, 1.0)];
+    scaleAnimation.duration = self.animationDuration * 0.75f;
     scaleAnimation.cumulative = YES;
-    scaleAnimation.repeatCount = HUGE_VALF;
+    scaleAnimation.repeatCount = 1;
     scaleAnimation.removedOnCompletion= NO;
     scaleAnimation.fillMode=kCAFillModeForwards;
-    scaleAnimation.autoreverses = YES;
-    scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    return scaleAnimation;
+    scaleAnimation.autoreverses = NO;
+    scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.2:0.0 :0.8 :1.0];
+    scaleAnimation.speed = 1.0f;
+    scaleAnimation.beginTime = self.animationDuration * 0.25f;
+
+    
+    CAAnimationGroup *group = [CAAnimationGroup animation];
+    group.duration = self.animationDuration;
+    group.repeatCount = HUGE_VALF;
+    group.removedOnCompletion= NO;
+    group.fillMode=kCAFillModeForwards;
+    group.autoreverses = YES;
+    group.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.2:0.0 :0.8 :1.0];
+    
+    group.animations = [NSArray arrayWithObjects:scaleAnimation, nil];
+    return group;
 }
 
 @end
