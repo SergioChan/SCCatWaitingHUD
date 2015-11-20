@@ -26,7 +26,8 @@
 {
     if(![SCCatWaitingHUD sharedInstance].isAnimating)
     {
-        [[SCCatWaitingHUD sharedInstance] animateWithInteractionEnabled:YES];    }
+        [[SCCatWaitingHUD sharedInstance] animateWithInteractionEnabled:YES];
+    }
     else
     {
         [[SCCatWaitingHUD sharedInstance] stop];

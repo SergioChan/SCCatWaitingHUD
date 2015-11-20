@@ -23,7 +23,6 @@
  *  Time duration for HUD display and disappear.
  */
 @property (nonatomic) CGFloat easeInDuration;
-
 @end
 
 @implementation SCCatWaitingHUD
@@ -43,7 +42,8 @@
     self = [super initWithFrame:frame];
     if(self)
     {
-        self.animationDuration = 1.5f;
+        // Recommended duration would be 2.0 seconds. Represents half of the time of each loop.
+        self.animationDuration = 2.0f;
         self.easeInDuration = self.animationDuration * 0.25f;
         
         [[NSNotificationCenter defaultCenter] addObserver:self
