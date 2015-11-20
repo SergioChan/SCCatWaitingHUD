@@ -18,6 +18,12 @@
 
 @property (nonatomic, strong) UIView *leftEyeCover;
 @property (nonatomic, strong) UIView *rightEyeCover;
+
+/**
+ *  Time duration for HUD display and disappear.
+ */
+@property (nonatomic) CGFloat easeInDuration;
+
 @end
 
 @implementation SCCatWaitingHUD
@@ -37,8 +43,8 @@
     self = [super initWithFrame:frame];
     if(self)
     {
-        self.easeInDuration = 0.3f;
-        self.animationDuration = 2.0f;
+        self.animationDuration = 1.5f;
+        self.easeInDuration = self.animationDuration * 0.25f;
         
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(statusBarOrientationChange:)
@@ -90,7 +96,7 @@
     _leftEye.layer.masksToBounds = YES;
     _leftEye.layer.cornerRadius = 2.5f;
     _leftEye.backgroundColor = [UIColor blackColor];
-    _leftEye.layer.anchorPoint = CGPointMake(1.7f, 1.3f);
+    _leftEye.layer.anchorPoint = CGPointMake(1.5f, 1.5f);
     _leftEye.layer.position = CGPointMake(self.faceView.left + 13.5f,self.faceView.top + width/3.0f + 7.5f);
     [_indicatorView addSubview:_leftEye];
     
@@ -104,7 +110,7 @@
     _rightEye.layer.masksToBounds = YES;
     _rightEye.layer.cornerRadius = 2.5f;
     _rightEye.backgroundColor = [UIColor blackColor];
-    _rightEye.layer.anchorPoint = CGPointMake(1.7f, 1.3f);
+    _rightEye.layer.anchorPoint = CGPointMake(1.5f, 1.5f);
     _rightEye.layer.position = CGPointMake(self.faceView.right - 13.5f, self.faceView.top + width/3.0f + 7.5f);
     [_indicatorView addSubview:_rightEye];
     
@@ -230,6 +236,8 @@
     {
         return;
     }
+    
+    _isAnimating = YES;
     [_backgroundWindow makeKeyAndVisible];
     timer = [NSTimer scheduledTimerWithTimeInterval:self.animationDuration * 2.0f  target:self selector:@selector(timerUpdate:) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
@@ -239,15 +247,19 @@
         _backgroundWindow.alpha = 1.0f;
         _indicatorView.alpha = 1.0f;
     } completion:^(BOOL finished) {
-        _isAnimating = YES;
-    
-        [_mouseView.layer addAnimation:[self rotationAnimation] forKey:@"rotate"];
-        [_leftEye.layer addAnimation:[self rotationAnimation] forKey:@"rotate"];
-        [_rightEye.layer addAnimation:[self rotationAnimation] forKey:@"rotate"];
-        
-        [_leftEyeCover.layer addAnimation:[self scaleAnimation] forKey:@"scale"];
-        [_rightEyeCover.layer addAnimation:[self scaleAnimation] forKey:@"scale"];
     }];
+    
+    [_leftEyeCover.layer addAnimation:[self scaleAnimation] forKey:@"scale"];
+    [_rightEyeCover.layer addAnimation:[self scaleAnimation] forKey:@"scale"];
+    
+    [self performSelector:@selector(test) withObject:nil afterDelay:self.animationDuration * 0.25f];
+}
+
+- (void)test
+{
+    [_mouseView.layer addAnimation:[self rotationAnimation] forKey:@"rotate"];
+    [_leftEye.layer addAnimation:[self rotationAnimation] forKey:@"rotate"];
+    [_rightEye.layer addAnimation:[self rotationAnimation] forKey:@"rotate"];
 }
 
 - (void)animate
@@ -338,7 +350,7 @@
     scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
     scaleAnimation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
     scaleAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 3.0, 1.0)];
-    scaleAnimation.duration = self.animationDuration * 0.75f;
+    scaleAnimation.duration = self.animationDuration;
     scaleAnimation.cumulative = YES;
     scaleAnimation.repeatCount = 1;
     scaleAnimation.removedOnCompletion= NO;
@@ -346,7 +358,7 @@
     scaleAnimation.autoreverses = NO;
     scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.2:0.0 :0.8 :1.0];
     scaleAnimation.speed = 1.0f;
-    scaleAnimation.beginTime = self.animationDuration * 0.25f;
+    scaleAnimation.beginTime = 0.0f;
 
     
     CAAnimationGroup *group = [CAAnimationGroup animation];
@@ -355,7 +367,7 @@
     group.removedOnCompletion= NO;
     group.fillMode=kCAFillModeForwards;
     group.autoreverses = YES;
-    group.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.2:0.0 :0.8 :1.0];
+    group.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.2:0.0:0.8 :1.0];
     
     group.animations = [NSArray arrayWithObjects:scaleAnimation, nil];
     return group;

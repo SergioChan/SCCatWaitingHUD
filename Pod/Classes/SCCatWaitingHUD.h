@@ -34,11 +34,6 @@
 @property (nonatomic) BOOL isAnimating;
 
 /**
- *  Time duration for HUD display and disappear.
- */
-@property (nonatomic) CGFloat easeInDuration;
-
-/**
  *  Time duration for each loop.
  */
 @property (nonatomic) CGFloat animationDuration;
@@ -46,7 +41,7 @@
 @property (nonatomic) UIInterfaceOrientation previousOrientation;
 
 /**
- *  Title of your HUD. Display in contentLabel.
+ *  Title of your HUD. Display in contentLabel. Default is 'Loading...'
  */
 @property (nonatomic, strong) NSString *title;
 

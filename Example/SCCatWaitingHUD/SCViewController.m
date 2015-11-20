@@ -26,13 +26,10 @@
 {
     if(![SCCatWaitingHUD sharedInstance].isAnimating)
     {
-        [[SCCatWaitingHUD sharedInstance] animate];
-        self.hintLabel.text = @"Tap to stop";
-    }
+        [[SCCatWaitingHUD sharedInstance] animateWithInteractionEnabled:YES];    }
     else
     {
         [[SCCatWaitingHUD sharedInstance] stop];
-        self.hintLabel.text = @"Tap to animate";
     }
     
 }
