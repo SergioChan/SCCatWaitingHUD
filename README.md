@@ -60,8 +60,9 @@ Here I provided you several complex way to call the `animate` method.
 * v0.1.4 Add eye cover and Loading contentLabel animation
 * v0.1.5 Finish perfect timing function for eye cover movement and polish some of the codes
 
+--
 
-* v0.1.0 基本版本  
+* v0.1.0 基本版本
 * v0.1.1 支持横屏
 * v0.1.4 添加眼皮运动和下方Loading字样的Label
 * v0.1.5 优化代码结构，精确调整了眼皮和眼珠的运动时间曲线
