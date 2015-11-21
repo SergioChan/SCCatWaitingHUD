@@ -54,6 +54,13 @@ Here I provided you several complex way to call the `animate` method.
 - (void)animateWithInteractionEnabled:(BOOL)enabled title:(NSString *)title;
 ```
 
+Also, you can modify the duration of the animation by simply changing this parameter..
+你可以通过修改 `animationDuration` 这个参数来控制每转一圈的时间，这个参数代表的是180度旋转，也就是半圈的时长。
+
+```Objective-C
+// Recommended duration would be 2.0 seconds. Represents half of the time of each loop.
+self.animationDuration = 2.0f;
+```
 ## BackLog 更新日志
 * v0.1.0 Basic Version
 * v0.1.1 Add Landscape Orientation Support
