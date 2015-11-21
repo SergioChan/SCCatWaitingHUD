@@ -19,10 +19,20 @@
 @property (nonatomic, strong) UIView *leftEyeCover;
 @property (nonatomic, strong) UIView *rightEyeCover;
 
+@property (nonatomic) UIInterfaceOrientation previousOrientation;
+
+// Warning: The parameters below are not recommended to modify by user at runtime.
+
 /**
  *  Time duration for HUD display and disappear.
  */
 @property (nonatomic) CGFloat easeInDuration;
+
+/**
+ *  Time duration for each loop.
+ */
+@property (nonatomic) CGFloat animationDuration;
+
 @end
 
 @implementation SCCatWaitingHUD
@@ -195,9 +205,18 @@
     _indicatorView.transform = transform;
 }
 
+- (void)animateWithInteractionEnabled:(BOOL)enabled title:(NSString *)title duration:(CGFloat)duration
+{
+    if(!title)
+        self.title = title;
+    self.animationDuration = duration / 2.0f;
+    [self animateWithInteractionEnabled:enabled];
+}
+
 - (void)animateWithInteractionEnabled:(BOOL)enabled title:(NSString *)title
 {
-    self.title = title;
+    if(!title)
+        self.title = title;
     [self animateWithInteractionEnabled:enabled];
 }
 

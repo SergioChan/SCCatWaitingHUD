@@ -34,13 +34,6 @@
 @property (nonatomic) BOOL isAnimating;
 
 /**
- *  Time duration for each loop.
- */
-@property (nonatomic) CGFloat animationDuration;
-
-@property (nonatomic) UIInterfaceOrientation previousOrientation;
-
-/**
  *  Title of your HUD. Display in contentLabel. Default is 'Loading...'
  */
 @property (nonatomic, strong) NSString *title;
@@ -57,12 +50,21 @@
 - (void)animateWithInteractionEnabled:(BOOL)enabled;
 
 /**
- *  You can attach your HUD title to the view using this animation method.
+ *  You can attach your HUD title to the view using this animation method. Default title is 'Loading...'.
  *
  *  @param enabled YES代表能响应原生View事件，NO代表block当前所有的手势操作
  *  @param title   HUD title
  */
 - (void)animateWithInteractionEnabled:(BOOL)enabled title:(NSString *)title;
+
+/**
+ *  You can also customize duration for each loop (also can be represented as speed) using this animation method. Default duration is 4.0 seconds each loop.
+ *
+ *  @param enabled YES代表能响应原生View事件，NO代表block当前所有的手势操作
+ *  @param title   HUD title
+ *  @param duration time for each loop
+ */
+- (void)animateWithInteractionEnabled:(BOOL)enabled title:(NSString *)title duration:(CGFloat)duration;
 
 - (void)stop;
 @end

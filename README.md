@@ -33,8 +33,8 @@ else
 }
 ```
 
-Here I provided you several complex way to call the `animate` method.  
-这里我提供了两种更复杂一些的方式来调用`animate`方法。
+Here I provided you several complex ways to call the `animate` method.  
+有些加载交互是需要block用户当前操作的，因此在这里我提供了两种更复杂一些的方式来调用`animate`方法。
 
 ```Objective-C
 /**
@@ -54,18 +54,25 @@ Here I provided you several complex way to call the `animate` method.
 - (void)animateWithInteractionEnabled:(BOOL)enabled title:(NSString *)title;
 ```
 
-Also, you can modify the duration of the animation by simply changing this parameter..
-你可以通过修改 `animationDuration` 这个参数来控制每转一圈的时间，这个参数代表的是180度旋转，也就是半圈的时长。
+Moreover, I provided a new method to call `animate` in version 0.1.6 that can give you ablity to customize the duration for each loop.  
+另外我在0.1.6版本提供了一个更新的调用 `animate` 方法的接口，可以让你自定义每转一圈的时长，从而修改旋转的速度，默认值是4秒一圈，在这个速度上看老鼠跑的不会异常的快，当然提供给你这个方法是让你可以让它跑得更快。
 
 ```Objective-C
-// Recommended duration would be 2.0 seconds. Represents half of the time of each loop.
-self.animationDuration = 2.0f;
+/**
+*  You can also customize duration for each loop (also can be represented as speed) using this animation method. Default duration is 4.0 seconds each loop.
+*
+*  @param enabled YES代表能响应原生View事件，NO代表block当前所有的手势操作
+*  @param title   HUD title
+*  @param duration time for each loop
+*/
+- (void)animateWithInteractionEnabled:(BOOL)enabled title:(NSString *)title duration:(CGFloat)duration;
 ```
 ## BackLog 更新日志
 * v0.1.0 Basic Version
 * v0.1.1 Add Landscape Orientation Support
 * v0.1.4 Add eye cover and Loading contentLabel animation
 * v0.1.5 Finish perfect timing function for eye cover movement and polish some of the codes
+* v0.1.6 Add a new animate method that can customize duration for each loop
 
 --
 
@@ -73,6 +80,7 @@ self.animationDuration = 2.0f;
 * v0.1.1 支持横屏
 * v0.1.4 添加眼皮运动和下方Loading字样的Label
 * v0.1.5 优化代码结构，精确调整了眼皮和眼珠的运动时间曲线
+* v0.1.6 添加一个新的animate方法入口
 
 ## Requirements 版本需求
 iOS 8.0 Above
@@ -83,7 +91,7 @@ SCCatWaitingHUD is available through [CocoaPods](http://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'SCCatWaitingHUD', '~> 0.1.5'
+pod 'SCCatWaitingHUD', '~> 0.1.6'
 ```
 
 ## License
