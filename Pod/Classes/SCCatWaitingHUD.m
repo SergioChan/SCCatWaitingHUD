@@ -207,7 +207,7 @@
 
 - (void)animateWithInteractionEnabled:(BOOL)enabled title:(NSString *)title duration:(CGFloat)duration
 {
-    if(!title)
+    if(title)
         self.title = title;
     self.animationDuration = duration / 2.0f;
     [self animateWithInteractionEnabled:enabled];
@@ -215,7 +215,7 @@
 
 - (void)animateWithInteractionEnabled:(BOOL)enabled title:(NSString *)title
 {
-    if(!title)
+    if(title)
         self.title = title;
     [self animateWithInteractionEnabled:enabled];
 }
