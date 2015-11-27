@@ -16,6 +16,8 @@ This is a cute and simple loading HUD :-P Enjoy!
 
 ## Usage 用法
 
+你可以在[这里](http://anius.io/2015/11/25/SCCatWaitingHUD/)看到详细的实现原理。
+
 To run the example project, clone the repo, and run `pod install` from the Example directory first.  
 想要运行示例工程，将这个仓库clone到本地，在`Example`目录下运行`pod install`。
 
