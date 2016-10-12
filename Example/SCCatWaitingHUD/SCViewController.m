@@ -32,8 +32,22 @@
     {
         [[SCCatWaitingHUD sharedInstance] stop];
     }
-    
 }
+
+// For issue #5
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    if(![SCCatWaitingHUD sharedInstance].isAnimating)
+//    {
+//        [[SCCatWaitingHUD sharedInstance] animateWithInteractionEnabled:YES];
+//    }
+//    else
+//    {
+//        [[SCCatWaitingHUD sharedInstance] stop];
+//    }
+//}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

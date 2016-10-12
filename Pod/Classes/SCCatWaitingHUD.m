@@ -75,10 +75,11 @@
     _backgroundWindow.windowLevel = UIWindowLevelStatusBar;
     _backgroundWindow.backgroundColor = [UIColor clearColor];
     _backgroundWindow.alpha = 0.0f;
+    _backgroundWindow.rootViewController = [[UIViewController alloc] init];
     self.title = @"Loading...";
     
     self.blurView = [[UIVisualEffectView alloc]initWithFrame:self.frame];
-    _blurView.effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    _blurView.effect = nil;
     [_backgroundWindow addSubview:_blurView];
     
     self.userInteractionEnabled = NO;
@@ -262,19 +263,21 @@
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     [timer fire];
     
-    [UIView animateWithDuration:_easeInDuration animations:^{
-        _backgroundWindow.alpha = 1.0f;
-        _indicatorView.alpha = 1.0f;
-    } completion:^(BOOL finished) {
-    }];
-    
     [_leftEyeCover.layer addAnimation:[self scaleAnimation] forKey:@"scale"];
     [_rightEyeCover.layer addAnimation:[self scaleAnimation] forKey:@"scale"];
     
-    [self performSelector:@selector(test) withObject:nil afterDelay:self.animationDuration * 0.25f];
+    [self performSelector:@selector(beginRotate) withObject:nil afterDelay:self.animationDuration * 0.25f];
+    
+    _backgroundWindow.alpha = 1.0f;
+    
+    [UIView animateWithDuration:_easeInDuration delay:0.25f options:UIViewAnimationCurveEaseInOut animations:^{
+        _blurView.effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+        _indicatorView.alpha = 1.0f;
+    } completion:^(BOOL finished) {
+    }];
 }
 
-- (void)test
+- (void)beginRotate
 {
     [_mouseView.layer addAnimation:[self rotationAnimation] forKey:@"rotate"];
     [_leftEye.layer addAnimation:[self rotationAnimation] forKey:@"rotate"];
@@ -301,15 +304,17 @@
     [self.contentLabel.layer removeAllAnimations];
     // 一定要在结束的时候清空这个layer所附带的所有动画，否则会在下一次出现的时候重新显示未完成的动画
     
-    [UIView animateWithDuration:_easeInDuration animations:^{
-        _backgroundWindow.alpha = 0.0f;
+    [UIView animateWithDuration:_easeInDuration delay:0.0f options:UIViewAnimationCurveEaseInOut animations:^{
+        _blurView.effect = nil;
         _indicatorView.alpha = 0.0f;
     } completion:^(BOOL finished) {
         CGAffineTransform transform = CGAffineTransformIdentity;
         //transform = CGAffineTransformRotate(transform,  radians(0.0f));
         _indicatorView.transform = transform;
         _isAnimating = NO;
+        _backgroundWindow.alpha = 0.0f;
         _backgroundWindow.hidden = YES;
+        
         
         // According to Apple Doc : This is a convenience method to make the receiver the main window and displays it in front of other windows at the same window level or lower. You can also hide and reveal a window using the inherited hidden property of UIView.
         [_mouseView.layer removeAnimationForKey:@"rotate"];
